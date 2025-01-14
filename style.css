@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center logo and navigation vertically */
+    padding: 1rem 2rem;
+    background-color: #232323; /* Navbar background */
+    position: sticky; /* Keep navbar at the top */
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.logo {
+    max-width: 150px; /* Make logo responsive */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between links */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    display: flex; /* Align items in a row */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+}
+
+nav li {
+    margin: 0 0.5rem; /* Space between items */
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Link color */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9800; /* Highlight color */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links when visible */
+        background-color: #232323; /* Match navbar background */
+        position: absolute;
+        top: 100%; /* Dropdown below navbar */
+        right: 0;
+        width: 100%; /* Full width on mobile */
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: flex; /* Show the nav when active */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items */
+    }
+
+    nav li {
+        margin: 0.5rem 0; /* Add spacing between items */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button */
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Hide the menu toggle button on larger screens */
+.menu-toggle {
+    display: none;
+}
+
+#home {
+    background-image: url('../img/CV_good.png'); /* Path to your background image */
+    background-size: 100% auto; /* Stretch the width to 100%, height adjusts automatically */
+    background-position: bottom; /* Focus on the bottom part of the image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    color: #ffffff; /* Text color for better readability */
+    text-align: center; /* Center-align the text */
+    padding: 5rem 1rem; /* Adjust padding for spacing */
+    position: relative; /* Allow for overlay effects */
+    min-height: 50vh; /* Ensure the section has a reasonable height */
+}
+
+/* Optional: Add a semi-transparent overlay for better text contrast */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: 1; /* Place behind text */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Adjust heading size */
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+#team {
+    padding: 2rem 1rem;
+}
+
+#team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center; /* Center-align content */
+    gap: 1rem; /* Space between team members */
+}
+
+.team-member {
+    text-align: center;
+    margin: 0.5rem;
+    border: 1px solid #ddd; /* Optional: Add a border around each card */
+    border-radius: 8px; /* Optional: Rounded corners */
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    margin: 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* Styles for big members */
+.featured-members .team-member.big {
+    flex: 1 1 45%; /* Take 45% of the container width */
+    max-width: 400px; /* Limit maximum size */
+}
+
+/* Styles for smaller members */
+.small-members .team-member {
+    flex: 1 1 20%; /* Take 20% of the container width */
+    max-width: 150px; /* Limit maximum size */
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 100%; /* Stack all members on smaller screens */
+    }
+}
+
+
+.sponsor-logos {
+    display: flex; /* Align logos horizontally */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    justify-content: center; /* Center the logos */
+    gap: 5px; /* Small space between logos */
+}
+
+.sponsor-logos img {
+    max-width: 150px; /* Control the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 2px; /* Additional small space around each logo */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%; /* Ensure images don't overflow */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+section {
+    box-sizing: border-box; /* Include padding/borders in width calculations */
+    width: 100%; /* Ensure sections don't exceed viewport width */
+}
