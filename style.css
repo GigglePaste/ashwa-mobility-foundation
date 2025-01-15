@@ -26,7 +26,7 @@ header {
     justify-content: space-between; /* Space between logo and navigation */
     align-items: center; /* Center logo and navigation vertically */
     padding: 1rem 2rem;
-    background-color: #232323; /* Navbar background */
+    background-color: #000; /* Navbar background */
     position: sticky; /* Keep navbar at the top */
     top: 0;
     z-index: 10;
