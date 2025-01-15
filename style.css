@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Samarkan';
+    src: url('./fonts/SAMAN.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Xenotron';
+    src: url('./fonts/XENOTRON.TTF') format('truetype');
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -146,13 +156,20 @@ nav a:hover {
 }
 
 h2 {
+    font-family: 'Samarkan', sans-serif;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
 
-p {
+p{
     margin-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: 1rem;   
+}
+
+p1{
+    margin-bottom: 1.5rem;
+    font-size:  1rem;
+    font-family: 'Xenotron', sans-serif;
 }
 
 #team {
@@ -194,12 +211,16 @@ p {
 .team-member h3 {
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    font-family: 'Samarkan', sans-serif;
 }
 
 .team-member p {
     margin: 0;
     font-style: italic;
     color: #666;
+    font-family: 'Xenotron', sans-serif;
+    font-size: 0.90rem;
+
 }
 
 /* Styles for big members */
@@ -244,6 +265,8 @@ footer {
 
 footer p {
     font-size: 1rem;
+    font-family: 'Samarkan', sans-serif;
+    color: #ff0000;
 }
 
 img {
